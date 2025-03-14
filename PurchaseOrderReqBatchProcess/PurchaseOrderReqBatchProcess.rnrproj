@@ -15,10 +15,12 @@
     <ProjectGuid>{f0f2dc4b-4b55-4c0e-a329-9fd9dd0de21a}</ProjectGuid>
     <Name>PurchaseOrderReqBatchProcess</Name>
     <RootNamespace>PurchaseOrderReqBatchProcess</RootNamespace>
+    <StartupType>Class</StartupType>
+    <StartupObject>PO_BatchProcessController</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Configuration>Debug</Configuration>
-    <DBSyncInBuild>False</DBSyncInBuild>
+    <DBSyncInBuild>True</DBSyncInBuild>
     <GenerateFormAdaptors>False</GenerateFormAdaptors>
     <Company>
     </Company>
@@ -31,6 +33,50 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Action Menu Items\" />
+    <Folder Include="Classes\" />
+    <Folder Include="Display Menu Items\" />
+    <Folder Include="Form Extensions\" />
+    <Folder Include="Menu Extensions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AxClass\PO_BatchProcessContract">
+      <SubType>Content</SubType>
+      <Name>PO_BatchProcessContract</Name>
+      <Link>Classes\PO_BatchProcessContract</Link>
+    </Content>
+    <Content Include="AxClass\PO_BatchProcessController">
+      <SubType>Content</SubType>
+      <Name>PO_BatchProcessController</Name>
+      <Link>Classes\PO_BatchProcessController</Link>
+    </Content>
+    <Content Include="AxClass\PO_BatchProcessService">
+      <SubType>Content</SubType>
+      <Name>PO_BatchProcessService</Name>
+      <Link>Classes\PO_BatchProcessService</Link>
+    </Content>
+    <Content Include="AxFormExtension\PurchReqTableListPage.SSRS_Reports">
+      <SubType>Content</SubType>
+      <Name>PurchReqTableListPage.SSRS_Reports</Name>
+      <Link>Form Extensions\PurchReqTableListPage.SSRS_Reports</Link>
+    </Content>
+    <Content Include="AxMenuExtension\AccountsPayable.SSRS_Reports">
+      <SubType>Content</SubType>
+      <Name>AccountsPayable.SSRS_Reports</Name>
+      <Link>Menu Extensions\AccountsPayable.SSRS_Reports</Link>
+    </Content>
+    <Content Include="AxMenuItemAction\PO_BatchProcessApproval">
+      <SubType>Content</SubType>
+      <Name>PO_BatchProcessApproval</Name>
+      <Link>Action Menu Items\PO_BatchProcessApproval</Link>
+    </Content>
+    <Content Include="AxMenuItemDisplay\PO_BatchProcessApprovalDisplay">
+      <SubType>Content</SubType>
+      <Name>PO_BatchProcessApprovalDisplay</Name>
+      <Link>Display Menu Items\PO_BatchProcessApprovalDisplay</Link>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.17.0.targets" />
 </Project>
